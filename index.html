@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brickbound</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Retro platformer prototype</p>
+        <h1>Brickbound</h1>
+        <p class="summary">
+          Dash through blocks, scoop up coins, stomp roaming grumps, and reach the flag before the clock runs out.
+        </p>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <span>Move</span>
+          <strong>A / D or Arrow Keys</strong>
+        </div>
+        <div>
+          <span>Jump</span>
+          <strong>W, Up, or Space</strong>
+        </div>
+        <div>
+          <span>Reset</span>
+          <strong>R</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-shell" aria-label="Brickbound game">
+      <div class="hud">
+        <div class="hud-pill"><span>Coins</span><strong id="coins-value">0</strong></div>
+        <div class="hud-pill"><span>Lives</span><strong id="lives-value">3</strong></div>
+        <div class="hud-pill"><span>Time</span><strong id="time-value">90</strong></div>
+        <button id="restart-button" class="hud-button" type="button">Restart</button>
+      </div>
+
+      <div class="canvas-frame">
+        <canvas id="game" width="960" height="528" aria-label="Side-scrolling platformer"></canvas>
+        <div class="message-panel" id="message-panel" aria-live="polite">
+          <h2 id="message-title">Ready?</h2>
+          <p id="message-text">Collect coins, avoid pits, and grab the flag.</p>
+          <button id="message-button" class="hud-button" type="button">Start Run</button>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <button class="touch-button" data-control="left" type="button">Left</button>
+        <button class="touch-button" data-control="jump" type="button">Jump</button>
+        <button class="touch-button" data-control="right" type="button">Right</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
